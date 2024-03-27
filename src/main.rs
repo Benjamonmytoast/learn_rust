@@ -1,4 +1,5 @@
 mod elevator_events;
+mod expression_eval;
 
 use elevator_events::elevator_events;
 use memoize::memoize;
@@ -64,14 +65,14 @@ fn transpose_matrix(matrix: Matrix) -> Matrix{
     return transposed;
 }
 
+static  MATRIX: Matrix = [
+    [101, 102, 103],
+    [201, 202, 203],
+    [301, 302, 303],
+];
 fn matrix_exercise() {
-    let matrix:Matrix = [
-        [101, 102, 103],
-        [201, 202, 203],
-        [301, 302, 303],
-    ];
-    println!("matrix: {:#?}", matrix);
-    let transposed = transpose_matrix(matrix);
+    println!("matrix: {:#?}", MATRIX);
+    let transposed = transpose_matrix(MATRIX);
     println!("transposed: {:#?}", transposed);
 }
 
