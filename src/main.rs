@@ -1,8 +1,10 @@
 mod elevator_events;
 mod expression_eval;
+mod logger_trait;
 
 use elevator_events::elevator_events;
 use memoize::memoize;
+use logger_trait::logger_trait_exercise;
 
 fn main() {
     let greeting = greet("Ben", true);
@@ -12,6 +14,7 @@ fn main() {
     matrix_exercise();
     geometry_exercise();
     elevator_events();
+    logger_trait_exercise();
 }
 
 fn greet(name: &str, is_intro: bool) -> String {
